@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+
+{% include "genrePanel.html" %}
+
+<form action = "{{url_for('newMovie', genre_id = genre_id)}}" method = "POST" >
+	<fieldset>
+		<legend><h2>New Movie:</h2></legend>
+
+		<p>Name:</p>
+		<input type="text" size="45" name="name" required>
+
+		<p>Poster:</p>
+		<input type="text" size="45" name="poster" required>
+
+		<p>Director:</p>
+		<input type="text" size="45" name="director" required>
+
+		<p>Description:</p>
+		<textarea name="description" rows="5" cols="40" required></textarea><br><br>
+
+		<button type="submit" class="fa fa-plus-circle green"></button>
+	</fieldset>
+</form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% block content %}
+
+{% include "genrePanel.html" %}
+
+<div class = "delete">
+	<form action="{{ url_for('deleteMovie', genre_id = movie.genre_id, movie_id=movie.id)}}" method = "post" style="margin-top:0;">
+		<h2>Are you sure you want to delete {{movie.name}} ?</h2><hr>
+
+		<button type="submit" class="fa fa-trash red"></button>
+	</form>
+	
+	<br>
+	
+	<a href = "{{url_for('showMovies', genre_id = movie.genre_id)}}"><button class="fa fa-times-circle green"></button></a>
+</div>
+
+{% endblock %}

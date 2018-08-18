@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+
+{% include "genrePanel.html" %}
+
+<form action = "{{url_for('newGenre')}}" method = "POST">
+	<fieldset>
+		<legend><h2>New Genre:</h2></legend>
+		
+		<p>Name:</p>
+		<input type="text" size="45" name="name" required><br><br>
+
+		<button type="submit" class="fa fa-plus-circle green"></button>
+	</fieldset>
+</form>
+
+{% endblock %}

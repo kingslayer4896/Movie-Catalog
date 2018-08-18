@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+
+{% include "genrePanel.html" %}
+
+<form action= "{{url_for('editMovie', genre_id = genre_id, movie_id=movie.id)}}" method = "POST">
+	<fieldset>
+		<legend><h2>Edit Movie:</h2></legend>
+		
+		<p>Name:</p>
+		<input type = "text" size="45" name = "name" placeholder = "{{movie.name}}" required>
+	
+		<p>Poster:</p>
+		<input type="text" size="45" name="poster" placeholder = "{{movie.poster}}" required>
+
+		<p>Director:</p>
+		<input type="text" size="45" name="director" placeholder = "{{movie.director}}" required>
+
+		<p>Description:</p>
+		<textarea name="description" rows="5" cols="40" placeholder = "{{movie.description}}" required></textarea><br><br>
+
+		<button type="submit" class="fa fa-edit blue"></button>
+	</fieldset>
+</form>
+
+{% endblock %}
+

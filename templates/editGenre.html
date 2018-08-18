@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% block content %}
+
+{% include "genrePanel.html" %}
+
+<form action= "{{url_for('editGenre', genre_id = genre.id)}}" method = "POST">
+	<fieldset>
+		<legend><h2>Edit Genre:</h2></legend>
+		
+		<p>Name:</p>
+		<input type = "text" size="45" name = "name" placeholder = "{{genre.name}}" required><br><br>
+
+		<button type="submit" class="fa fa-edit blue"></button>
+	</fieldset>
+</form>
+
+{% endblock %}
+

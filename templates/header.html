@@ -1,0 +1,9 @@
+<div id="header">
+	<a href="{{url_for('showGenres')}}"><p class="header-title">OMDb</p></a>
+	
+	{%if 'username' not in session %}
+		<a href="{{url_for('showLogin')}}"><p class="header-user fa fa-sign-in fa-2x"></p></a>
+	{% else %}
+		<a href="{{url_for('gdisconnect')}}"><p class="header-user fa fa-sign-out fa-2x"></p></a>
+	{% endif %}
+</div>

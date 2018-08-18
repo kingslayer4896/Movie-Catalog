@@ -1,0 +1,170 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica","Arial",sans-serif;
+  background-color: #f0f0f0;
+}
+
+a {
+  text-decoration: none;	
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#header {
+  height: 66px; 
+  width: 100%;
+  clear: both;
+  background-color: #1d1d1d;
+  border-bottom: 1px solid #2f2f2f;
+}
+
+.header-title {
+  margin: 10px 10px;
+  background-color: #f5c518;
+  color: #000000;
+  border-radius: 8px;
+  font-size: 25px;
+  font-weight: bold;
+  float: left;
+  padding:8px 8px;
+}
+
+.header-user {
+  margin: 10px;
+  background-color: #f5c518;
+  color: #000000;
+  border-radius: 50%;
+  float: right;
+  padding:8px;
+}
+
+.login-card {
+  margin: auto;
+  margin-top: 100px;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  background-color: #171717;
+  color: #f5c518;
+  text-align: center;
+  padding: 20px;
+}
+
+#signinButton {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+#genre {
+  width:20%;
+  height:100%;
+  background-color: #171717;
+  overflow-y:auto;
+}
+
+.genre-rows {
+  width:100%;
+  clear:both;
+}
+
+.add-button {
+  float:right; 
+  border-radius:50%; 
+  margin-right: 10px; 
+  padding:10px;
+}
+
+.genre-names {
+  margin:0;
+  padding:10px 10px;
+  font-size:18px;
+  color: #ffffff;
+}
+
+.genre-names:hover {
+  font-weight: bold;
+  background-color: #f5c518;
+}
+
+h2 {
+  padding-left:10px;
+  color: #f5c518;;
+}
+
+.movies {
+  width:80%;
+  height:100%;
+  display:flex;
+  flex-wrap:wrap;
+  overflow-y:auto;
+}
+
+.movie-card {
+  margin: 20px 0 0 70px;
+  width: calc((100% - 360px)/4);
+  color: #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #FFFFFF;
+  text-align:center;
+}
+
+.movie-card:hover {
+  opacity: 0.8;
+}
+
+.title-card {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.filtered-movies {
+  width:100%;
+  display:flex;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+}
+
+.movie-info {
+  width: 80%;
+  height: 100%;
+}
+
+form {
+  margin: auto;
+  margin-top: 80px;
+  color: #000000;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.delete {
+  margin: auto;
+  margin-top: 80px;
+  text-align:center;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  background-color: #171717;
+  padding:10px;
+}
+
+.blue {
+  background-color: #2e88a0;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.red {
+  background-color: #bd472d;
+}

@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block content %}
+
+{% include "genrePanel.html" %}
+
+<div class="movie-info">
+	<img src = "{{movie.poster}}" alt = "Movie Poster" width="200px" height="320px" style="float:left; margin:20px 20px 20px;">
+
+	<h1>{{movie.name}}</h1>
+
+	<h2>{{movie.director}}</h2>
+
+	<a href='{{url_for('editMovie', genre_id = movie.genre_id, movie_id = movie.id)}}'><button class="blue fa fa-edit"></button></a>
+
+	<a href='{{url_for('deleteMovie', genre_id = movie.genre_id, movie_id = movie.id)}}'><button class="red fa fa-trash"></button></a>
+
+	<p style="margin-right:20px; text-align:justify;">{{movie.description}}</p>
+</div>
+
+{% endblock %}

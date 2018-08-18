@@ -1,0 +1,17 @@
+<div id = "genre"><br>
+	<div class="genre-rows">
+		<h2 style = "margin-top:3px;float:left;">Genres</h2>
+		
+		<a href="{{url_for('newGenre')}}">
+			<button class = "green fa fa-plus-circle add-button"></button>
+		</a>
+	</div>
+        
+	<div class="genre-rows">
+		{% for genre in genres %}
+			<a href = "{{url_for('showMovies', genre_id = genre.id)}}">
+				<p class = "genre-names">{{genre.name}}</p>
+			</a>
+		{% endfor %}
+	</div>
+</div>
